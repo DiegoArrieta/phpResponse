@@ -63,51 +63,80 @@
 
             </div>
             <div class="w-full md:w-1/2 px-3">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="formulario-apellido">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="formulario-apellido">
                 Apellido
               </label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="formulario-apellido" type="text" placeholder="Ej: Soto">
             </div>
-            
+
           </div>
           <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full md:w-1/6">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="formulario-apellido">
-                    &nbsp;
-                </label>
-                <button
-                  class="calendar text-center w-12 appearance-none block bg-blue-400 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="formulario-btnCalendar" type="text"><i class="text-white fas fa-calendar"></i></button>
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="formulario-finicio">
-                  Fecha Inicio
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="formulario-finicio" type="text">
-              </div>
-              <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="formulario-ftermino">
-                  Termino
-                </label>
-                <input
-                  class="calendar appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="formulario-ftermino" type="text">
-  
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="formulario-dtotal">
-                  Días Totales
-                </label>
-                <input
-                  class="appearance-none text-center block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="formulario-dtotal" type="text">
-              </div>
-              
+            <div class="w-full md:w-1/6">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="formulario-apellido">
+                &nbsp;
+              </label>
+              <button
+                class="calendar text-center w-12 appearance-none block bg-blue-400 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="formulario-btnCalendar" type="text"><i class="text-white fas fa-calendar"></i></button>
             </div>
+            <div class="w-full md:w-1/4 px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="formulario-finicio">
+                Fecha Inicio
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="formulario-finicio" type="text">
+            </div>
+            <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="formulario-ftermino">
+                Termino
+              </label>
+              <input
+                class="calendar appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="formulario-ftermino" type="text">
+
+            </div>
+            <div class="w-full md:w-1/4 px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="formulario-dtotal">
+                Días Totales
+              </label>
+              <input
+                class="appearance-none text-center block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="formulario-dtotal" type="text">
+            </div>
+            <div class="flex flex-wrap -mx-3 mt-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                  Habitacion
+                </label>
+                <div class="relative">
+                  <select
+                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="formulario-habitacion">
+                    
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                  Costo
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="formulario-costo" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
       </div>
       </form>
       <div class="w-full calender"></div>
@@ -116,49 +145,72 @@
     </div>
   </section>
   <script>
-    $(function() {
+    $(function () {
       $('.calendar').pignoseCalendar({
-        select: function(date, context) {
-        /**
-         * @params this Element
-         * @params date moment[]
-         * @params context PignoseCalendarContext
-         * @returns void
-         */
+        select: function (date, context) {
+          /**
+           * @params this Element
+           * @params date moment[]
+           * @params context PignoseCalendarContext
+           * @returns void
+           */
 
-         // This is selected button Element.
-         var $this = $(this);
+          // This is selected button Element.
+          var $this = $(this);
 
-         // You can get target element in `context` variable, This element is same `$(this)`.
-         var $element = context.element;
+          // You can get target element in `context` variable, This element is same `$(this)`.
+          var $element = context.element;
 
-         // You can also get calendar element, It is calendar view DOM.
-         var $calendar = context.calendar;
+          // You can also get calendar element, It is calendar view DOM.
+          var $calendar = context.calendar;
 
-         // Selected dates (start date, end date) is passed at first parameter, And this parameters are moment type.
-         // If you unselected date, It will be `null`.
-         console.log(date[0].format('YYYY-MM-DD'));
-         $('#formulario-finicio').val(date[0].format('YYYY-MM-DD'));
-         $('#formulario-ftermino').val(date[1].format('YYYY-MM-DD'));
+          // Selected dates (start date, end date) is passed at first parameter, And this parameters are moment type.
+          // If you unselected date, It will be `null`.
+          console.log(date[0].format('YYYY-MM-DD'));
+          $('#formulario-finicio').val(date[0].format('YYYY-MM-DD'));
+          $('#formulario-ftermino').val(date[1].format('YYYY-MM-DD'));
 
-         //Calculo de días entre las fechas seleccionadas
-          var date1 = new Date(date[0].format('YYYY-MM-DD')); 
-          var date2 = new Date(date[1].format('YYYY-MM-DD')); 
-          var Difference_In_Time = date2.getTime() - date1.getTime(); 
-          var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
-          $('#formulario-dtotal').val(Difference_In_Days+1);
+          //Calculo de días entre las fechas seleccionadas
+          var date1 = new Date(date[0].format('YYYY-MM-DD'));
+          var date2 = new Date(date[1].format('YYYY-MM-DD'));
+          var Difference_In_Time = date2.getTime() - date1.getTime();
+          var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+          $('#formulario-dtotal').val(Difference_In_Days + 1);
 
-    },
-        lang:'es',
+        },
+        lang: 'es',
         multiple: true,
         week: 1,
-        toggle:false,
-        modal:true,
+        toggle: false,
+        modal: true,
         buttons: true,
         format: 'YYYY-MM-DD'
+      });
     });
-  });
 
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://zeussapp.herokuapp.com/habitacion.php',
+        dataType: 'json',
+        type: 'get',
+        success: function (data) {
+          console.log(data);
+          var opcion = '';
+          opcion += '<option selected value>Seleccione Habitación...</option>';
+          $.each(data, function (i, j) {
+            opcion += '<option value="'+j.precio+'">'+j.tipo +' $'+j.precio+ '.-</option>'
+          });
+          $('#formulario-habitacion').html(opcion);
+        }
+        
+      });
+      $(function () {
+        $("#formulario-habitacion").on('change', function () {
+          $("#formulario-costo").val($("#formulario-habitacion").val()*$("#formulario-dtotal").val())
+        });
+      });
+
+    });
   </script>
 </body>
 
