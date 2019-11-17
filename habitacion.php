@@ -12,17 +12,21 @@ if($method == "OPTIONS") {
   $someArray = [
     [
       "tipo"   => "Single",
-      "precio" => "$70,900"
+      "precio" => "70900"
+    ],
+    [
+        "tipo"   => "Single VIP",
+        "precio" => "120900"
     ],
     
     [
       "tipo"   => "Double",
-      "precio" => "$170,900"
+      "precio" => "170900"
     ],
     
     [
       "tipo"   => "Double VIP",
-      "precio" => "$370,900"
+      "precio" => "370900"
     ]
     
   ];
