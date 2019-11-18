@@ -18,6 +18,6 @@ if($method == "OPTIONS") {
       return in_array($tipo, $key);
   });
   echo $resultado;
-  $someJSON = json_encode($resultado);
+  $someJSON = json_encode($someArray);
   echo $someJSON;
 ?>
