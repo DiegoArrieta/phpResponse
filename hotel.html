@@ -220,6 +220,25 @@
         }
 
       });
+    });
+    $('#formulario-habitacion').on('change', function() {
+      $.ajax({
+        url: 'https://zeussapp.herokuapp.com/lista_habitaciones.php',
+        dataType: 'json',
+        type: 'get',
+        data: {'tipo': $('#formulario-habitacion').val()},
+        success: function (data) {
+          console.log(data);
+          var opcion = '';
+          var data_filter = data.filter( element => element.website =="yahoo")
+          opcion += '<option selected value>Seleccione...</option>';
+          $.each(data, function (i, j) {
+            opcion += '<option value="' + j.precio + '">' + j.tipo + ' $' + j.precio + '.-</option>'
+          });
+          $('#formulario-habitacion').html(opcion);
+        }
+
+      });
       $(function () {
         $("#formulario-habitacion").on('change', function () {
           $("#formulario-costo").val($("#formulario-habitacion").val() * $("#formulario-dtotal").val())
