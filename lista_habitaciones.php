@@ -15,8 +15,8 @@ if($method == "OPTIONS") {
     array("tipo" => "120900", "numero" => ["20","21","22","23","24"])
     );
   
-  $result = array_filter($array, function ($item) use ($tipo) {
-      if (stripos($item['tipo'], $tipo) !== false) {
+  $result = array_filter($array, function ($item){
+      if ($item['tipo'] == $tipo) {
           return true;
       }
       return false;
