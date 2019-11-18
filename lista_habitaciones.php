@@ -7,7 +7,10 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == "OPTIONS") {
     die();
 }
+
   $tipo = $_GET['tipo'];
+  echo 'Tipo: '+$tipo;
+  echo 'Version: '+phpversion();
   // Array
   $someArray = array(
     "70900" => ["10", "11","12","13","14","15"],
