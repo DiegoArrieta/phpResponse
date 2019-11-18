@@ -24,10 +24,14 @@ if($method == "OPTIONS") {
     echo 'Dentro del ArrayFilter';
     echo $k;
     if($k == $tipo){
+      echo 'True';
       return true;
+      
     }
     else{
+      echo 'False';
       return false;
+
     };
 }, ARRAY_FILTER_USE_KEY);
 
