@@ -7,6 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == "OPTIONS") {
     die();
 }
+  $tipo = $_GET['tipo'];
 
   // Array
   $someArray = [
@@ -24,7 +25,22 @@ if($method == "OPTIONS") {
     
   ];
 
+  
+// PHP function to check for even elements in an array 
+function filtro($array) 
+{ 
+    // returns if the input integer is even 
+    if($array[$tipo]) 
+       return TRUE; 
+    else 
+       return FALSE;  
+} 
+  $nueva_lista = array_filter($someArray, "filtro");
+
   // Convert Array to JSON String
-  $someJSON = json_encode($someArray);
+  $someJSON = json_encode($nueva_lista);
+
+  
+
   echo $someJSON;
 ?>
