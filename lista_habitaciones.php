@@ -20,7 +20,7 @@ if($method == "OPTIONS") {
 
   print_r($someArray);
 
-  $result = array_filter($someArray, function($k) {
+  $result = array_filter($someArray, function($k) use ($tipo) {
     echo 'Dentro del ArrayFilter '.$tipo;
     echo $k;
     if($k == $tipo){
