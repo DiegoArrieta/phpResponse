@@ -21,6 +21,8 @@ if($method == "OPTIONS") {
   print_r($someArray);
 
   $result = array_filter($someArray, function($k) {
+    echo 'Dentro del ArrayFilter';
+    echo $k;
     return $k == $tipo;
 }, ARRAY_FILTER_USE_KEY);
 
