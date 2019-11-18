@@ -19,7 +19,7 @@ if($method == "OPTIONS") {
           return true;
       }
       return false;
-  });
+  }, ARRAY_FILTER_USE_KEY);
 
   
   
