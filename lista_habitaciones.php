@@ -12,32 +12,21 @@ if($method == "OPTIONS") {
   // Array
   $someArray = [
     [
-        70900 => ["10", "11","12","13","14","15"],
+        "70900" => "10", "11","12","13","14","15",
     ],
     [
-        120900 => ["20","21","22","23","24"],
+        "120900" => "20","21","22","23","24",
       
     ],
     [
-        170900 => ["34","35","36","37","38"]
+        "170900" => "34","35","36","37","38"
     ]
     
     
   ];
   echo $someArray[$tipo];
   
-// PHP function to check for even elements in an array 
-function filtro($array) 
-{ 
-    // returns if the input integer is even 
-    if($array[$tipo]) 
 
-       return TRUE; 
-    else 
-       return FALSE;  
-} 
-  $nueva_lista = array_filter($someArray, "filtro");
-  // Convert Array to JSON String
   $someJSON = json_encode($nueva_lista);
   echo $someJSON;
 ?>
