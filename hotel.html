@@ -205,6 +205,11 @@
     });
 
     $(document).ready(function () {
+      $(function () {
+        $("#formulario-habitacion").on('change', function () {
+          $("#formulario-costo").val($("#formulario-habitacion").val() * $("#formulario-dtotal").val())
+        });
+      });
       $.ajax({
         url: 'https://zeussapp.herokuapp.com/habitacion.php',
         dataType: 'json',
@@ -240,12 +245,6 @@
         }
 
       });
-      $(function () {
-        $("#formulario-habitacion").on('change', function () {
-          $("#formulario-costo").val($("#formulario-habitacion").val() * $("#formulario-dtotal").val())
-        });
-      });
-
     });
   </script>
 </body>
