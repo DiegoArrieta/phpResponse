@@ -16,7 +16,7 @@ if($method == "OPTIONS") {
     );
   echo $someArray;
   $result = array_filter($someArray, function ($item){
-      if ($item['tipo'] == $tipo) {
+      if ($item[$tipo]) {
           return true;
       }
       return false;
