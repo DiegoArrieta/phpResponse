@@ -17,7 +17,7 @@ if($method == "OPTIONS") {
     $resultado = array_filter($someArray, function ($key) {
       return in_array($tipo, $key);
   });
-  echo $resultado;
+  
   $someJSON = json_encode($someArray);
   echo $someJSON;
 ?>
