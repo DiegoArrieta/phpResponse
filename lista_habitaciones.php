@@ -10,13 +10,19 @@ if($method == "OPTIONS") {
   $tipo = $_GET['tipo'];
   // Array
   $someArray = array(
-    "70900" => ["10", "11","12","13","14","15"],
-    "120900" => ["20","21","22","23","24"],
-    "170900" => ["34","35","36","37","38"]
+    array("tipo" => "70900", "numero" => ["10", "11","12","13","14","15"]),
+    array("tipo" => "170900", "numero" => ["34","35","36","37","38"]),
+    array("tipo" => "120900", "numero" => ["20","21","22","23","24"])
     );
-    $resultado = array_filter($someArray, function ($key) {
-      return in_array($tipo, $key);
+  
+  $result = array_filter($array, function ($item) use ($tipo) {
+      if (stripos($item['tipo'], $tipo) !== false) {
+          return true;
+      }
+      return false;
   });
+
+  echo $result;
   
   $someJSON = json_encode($someArray);
   echo $someJSON;
