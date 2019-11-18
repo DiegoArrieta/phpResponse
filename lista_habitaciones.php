@@ -10,7 +10,7 @@ if($method == "OPTIONS") {
   $tipo = $_GET['tipo'];
   echo $tipo;
   // Array
-  $someArray = [
+  $someArray = array(
     [
         "70900" => "10", "11","12","13","14","15",
     ],
@@ -23,8 +23,8 @@ if($method == "OPTIONS") {
     ]
     
     
-  ];
-  echo $someArray[$tipo];
+    );
+  echo array_keys($someArray);
   
 
   $someJSON = json_encode($nueva_lista);
