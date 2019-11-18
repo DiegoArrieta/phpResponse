@@ -9,8 +9,8 @@ if($method == "OPTIONS") {
 }
 
   $tipo = $_GET['tipo'];
-  echo 'Tipo: '+$tipo;
-  echo 'Version: '+phpversion();
+  echo 'Tipo: '.$tipo;
+  echo 'Version: '.phpversion();
   // Array
   $someArray = array(
     "70900" => ["10", "11","12","13","14","15"],
@@ -18,12 +18,10 @@ if($method == "OPTIONS") {
     "120900" => ["20","21","22","23","24"]
     );
   echo $someArray;
-  $result = array_filter($someArray, function ($item){
-      if ($item[$tipo]) {
-          return true;
-      }
-      return false;
-  }, ARRAY_FILTER_USE_KEY);
+
+  $result = array_filter($someArray, function($k) {
+    return $k == $tipo;
+}, ARRAY_FILTER_USE_KEY);
 
   
   
