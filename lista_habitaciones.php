@@ -8,7 +8,6 @@ if($method == "OPTIONS") {
     die();
 }
   $tipo = $_GET['tipo'];
-  echo $tipo;
   // Array
   $someArray = array(
     "70900" => ["10", "11","12","13","14","15"],
@@ -18,7 +17,7 @@ if($method == "OPTIONS") {
     $resultado = array_filter($someArray, function ($key) {
       return $key == $tipo;
   }, ARRAY_FILTER_USE_KEY);
-
+  echo $resultado;
   $someJSON = json_encode($resultado);
   echo $someJSON;
 ?>
