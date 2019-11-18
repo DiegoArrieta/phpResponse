@@ -18,6 +18,6 @@ if($method == "OPTIONS") {
   echo array_keys($someArray);
   
 
-  $someJSON = json_encode($nueva_lista);
+  $someJSON = json_encode($someArray);
   echo $someJSON;
 ?>
