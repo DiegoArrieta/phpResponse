@@ -8,7 +8,7 @@ if($method == "OPTIONS") {
     die();
 }
   $tipo = $_GET['tipo'];
-
+  echo $tipo;
   // Array
   $someArray = [
     [
