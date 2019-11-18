@@ -22,8 +22,8 @@ if($method == "OPTIONS") {
       return false;
   });
 
-  echo $result;
   
-  $someJSON = json_encode($someArray);
+  
+  $someJSON = json_encode($result);
   echo $someJSON;
 ?>
