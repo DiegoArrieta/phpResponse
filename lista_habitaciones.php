@@ -15,8 +15,8 @@ if($method == "OPTIONS") {
     "170900" => ["34","35","36","37","38"]
     );
     $resultado = array_filter($someArray, function ($key) {
-      return $key == $tipo;
-  }, ARRAY_FILTER_USE_KEY);
+      return in_array($tipo, $key);
+  });
   echo $resultado;
   $someJSON = json_encode($resultado);
   echo $someJSON;
