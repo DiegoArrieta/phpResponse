@@ -16,7 +16,7 @@ if($method == "OPTIONS") {
     "170900" => ["34","35","36","37","38"]
     );
   echo array_keys($someArray);
-  
+  echo '<br>';
 
   $someJSON = json_encode($someArray);
   echo $someJSON;
