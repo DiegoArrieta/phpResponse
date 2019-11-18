@@ -12,12 +12,13 @@ if($method == "OPTIONS") {
   echo 'Tipo: '.$tipo;
   echo 'Version: '.phpversion();
   // Array
-  $someArray = array(
+  $someArray = [
     "70900" => ["10", "11","12","13","14","15"],
     "170900" => ["34","35","36","37","38"],
     "120900" => ["20","21","22","23","24"]
-    );
-  echo $someArray;
+  ];
+
+  print_r($someArray);
 
   $result = array_filter($someArray, function($k) {
     return $k == $tipo;
