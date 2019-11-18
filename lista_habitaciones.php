@@ -23,7 +23,12 @@ if($method == "OPTIONS") {
   $result = array_filter($someArray, function($k) {
     echo 'Dentro del ArrayFilter';
     echo $k;
-    return $k == $tipo;
+    if($k == $tipo){
+      return true;
+    }
+    else{
+      return false;
+    };
 }, ARRAY_FILTER_USE_KEY);
 
   
