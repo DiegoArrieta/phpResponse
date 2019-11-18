@@ -24,23 +24,20 @@ if($method == "OPTIONS") {
     
     
   ];
-
+  echo $someArray[$tipo];
   
 // PHP function to check for even elements in an array 
 function filtro($array) 
 { 
     // returns if the input integer is even 
     if($array[$tipo]) 
+
        return TRUE; 
     else 
        return FALSE;  
 } 
   $nueva_lista = array_filter($someArray, "filtro");
-
   // Convert Array to JSON String
   $someJSON = json_encode($nueva_lista);
-
-  
-
   echo $someJSON;
 ?>
