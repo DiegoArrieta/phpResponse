@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
 
 while ( $row = mysql_fetch_assoc($result) ) {
 
-  $columnValues[] = $row['columnname'];
+  $columnValues[] = $row['nombre'];
 
 }
     echo $columnValues;
