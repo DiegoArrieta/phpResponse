@@ -11,14 +11,14 @@ include 'bd.php';
 $conn = OpenCon();
 
 $nombre = $_POST['formulario-nombre'];
-$apellido = $_POST[''];
-$fecha_inicio = $_POST[''];
-$fecha_termino = $_POST[''];
-$dias = $_POST[''];
-$servicio = $_POST[''];
-$habitacion = $_POST[''];
-$costo = $_POST[''];
-$pais = $_POST[''];
+$apellido = $_POST['formulario-apellido'];
+$fecha_inicio = $_POST['formulario-finicio'];
+$fecha_termino = $_POST['formulario-ftermino'];
+$dias = $_POST['formulario-dtotal'];
+$servicio = $_POST['formulario-habitacion'];
+$habitacion = $_POST['formulario-hlistado'];
+$costo = $_POST['formulario-costo'];
+$pais = $_POST['formulario-pais'];
 $sql = "INSERT INTO reservas (nombre, apellido, fecha_inicio, fecha_termino, dias, servicio, habitacion, costo,pais) VALUES (''$nombre', '$apellido', '$fecha_inicio', '$fecha_termino', '$dias', '$servicio', '$habitacion', '$costo', '$pais')";
 
 if(mysqli_query($conn, $sql)){
