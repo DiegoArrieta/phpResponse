@@ -16,8 +16,9 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
+    while($row = mysql_fetch_assoc($result))
+    {
+      echo $row;
     }
 } else {
     echo "0 results";
