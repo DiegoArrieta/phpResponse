@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $array = [
     while($row = $result->fetch_assoc()) {
-    $row['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais'],
+    $row['id'] => [$row['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais'] ],
     }
     ];
     $someJSON = json_encode($array);
