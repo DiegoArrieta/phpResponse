@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    
+ 
     while($row = mysql_fetch_assoc($result))
     {
       echo $row;
