@@ -13,7 +13,7 @@ $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
 $result = $conn->query($sql);
 
 $result = $conn->query($sql);
-
+$arreglo = array();
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
@@ -22,5 +22,6 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
+echo $arreglo;
 CloseCon($conn);
 ?>
