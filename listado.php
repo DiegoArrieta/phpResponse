@@ -14,12 +14,9 @@ $result = $conn->query($sql);
 $arreglot = array();
 if ($result->num_rows > 0) {
     
-    while($row = $result->fetch_assoc()) {
-    $arreglo[] =$row['id'], [$row['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais'],
-    }
+    echo $result;
     
-    $someJSON = json_encode($arreglo);
-    echo $someJSON;
+    
 } else {
     echo "0 results";
 }
