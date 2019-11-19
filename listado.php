@@ -13,7 +13,7 @@ $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    
+    echo $result;
     $columnValues = Array();
 
 while ( $row = mysql_fetch_assoc($result) ) {
