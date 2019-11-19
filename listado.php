@@ -19,9 +19,9 @@ if (mysqli_num_rows($result) > 0) {
     
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        echo "<tr>"
-        echo ."<td>".$row['id']."</tr>";
-        echo ."</tr>"
+        
+        echo "<tr><td>".$row['id']."</td></tr>";
+        
     }
         
 } else {
