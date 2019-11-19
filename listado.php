@@ -14,11 +14,10 @@ $result = $conn->query($sql);
 
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
- 
-    while($row = mysql_fetch_assoc($result))
-    {
-      echo $row;
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
     }
 } else {
     echo "0 results";
