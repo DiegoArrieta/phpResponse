@@ -51,7 +51,7 @@
       </div>
       <div class="w-full md:w-1/2">
         <h1>Reservar Habitación</h1>
-        <form class="w-full max-w-lg">
+        <form id="formulario-hotel" class="w-full max-w-lg" action="https://zeussapp.herokuapp.com/proceso.php">
           <!-- Inicio Primer Bloque -->
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -173,6 +173,20 @@
                       id="formulario-pais" type="text" placeholder="Ej: Chilezuela">
                 </div>
             </div>
+            <!-- termino Cuarto Bloque -->
+
+            <!-- Inicio Quino Bloque -->
+            <div class="flex flex-wrap -mx-3 mt-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <button type="clear" class="py-3 w-1/2 rounded border border-red-500 bg-red-300">Cancelar</button>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                  <button type="submit" class="py-3 w-1/2 rounded border border-green-500 bg-green-300">Enviar</button>
+              </div>
+            </div>
+            <!-- termino Cuarto Bloque -->
+
+
       </div>
       </form>
       <div class="w-full calender"></div>
@@ -266,6 +280,25 @@
 
       });
     });
+
+    $(function() {
+    
+    $("#formulario-hotel").submit(function(e) {
+        e.preventDefault();
+        var actionurl = e.currentTarget.action;
+        $.ajax({
+                url: actionurl,
+                type: 'post',
+                dataType: 'application/json',
+                data: $("#formulario-hotel").serialize(),
+                success: function(data) {
+                    console.log(data)
+                }
+        });
+
+    });
+
+});
   </script>
 </body>
 
