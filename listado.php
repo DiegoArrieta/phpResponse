@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        $arreglo[] = Array($row['id'] => $row['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais']);
+        $arreglo[] = Array($row["id"] => $row["nombre"]);
     }
 } else {
     echo "0 results";
