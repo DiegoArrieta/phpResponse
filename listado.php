@@ -11,13 +11,13 @@ include 'bd.php';
 $conn = OpenCon();
 $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
 $result = $conn->query($sql);
-
+$arreglot = array();
 if ($result->num_rows > 0) {
-    $array = [
+    
     while($row = $result->fetch_assoc()) {
-    $row['id'] => [$row['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais'] ],
+    $arreglo[] =$row['id'], [$row['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais'],
     }
-    ];
+    
     $someJSON = json_encode($array);
     echo $someJSON;
 } else {
