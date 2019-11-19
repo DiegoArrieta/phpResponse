@@ -19,7 +19,9 @@ if (mysqli_num_rows($result) > 0) {
     
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        $arreglo = [$row["id"] => $row["nombre"]]
+        echo "<tr>"
+        echo ."<td>".$row['id']."</tr>";
+        echo ."</tr>"
     }
         
 } else {
