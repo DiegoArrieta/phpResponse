@@ -18,7 +18,7 @@ $servicio = $_POST['formulario-habitacion'];
 $habitacion = $_POST['formulario-hlistado'];
 $costo = $_POST['formulario-costo'];
 $pais = $_POST['formulario-pais'];
-$sql = "INSERT INTO dbcmy8cct16o1bed.reservas (nombre, apellido, fecha_inicio, fecha_termino, dias, servicio, habitacion, costo,pais) VALUES (''$nombre', '$apellido', '$fecha_inicio', '$fecha_termino', '$dias', '$servicio', '$habitacion', '$costo', '$pais')";
+$sql = "INSERT INTO dbcmy8cct16o1bed.reservas (nombre, apellido, fecha_inicio, fecha_termino, dias, servicio, habitacion, costo,pais) VALUES ('$nombre', '$apellido', '$fecha_inicio', '$fecha_termino', '$dias', '$servicio', '$habitacion', '$costo', '$pais')";
 
 if(mysqli_query($conn, $sql)){
     echo "Los datos se guardaron ok";
