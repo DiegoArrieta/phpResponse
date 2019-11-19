@@ -10,15 +10,15 @@ if($method == "OPTIONS") {
 include 'bd.php';
 $conn = OpenCon();
 $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
-if(mysqli_query($conn, $sql)){
-    while($row = mysql_fetch_array($sql, MYSQL_ASSOC)) {
-      echo "EMP ID :{$row['id']}  <br> ".
-         "EMP NAME : {$row['nombre']} <br> ".
-         "EMP SALARY : {$row['apellido']} <br> ".
-         "--------------------------------<br>";
-   }
-} else{
-    echo "ERROR: no se pudo guardar $sql. " . mysqli_error($conn);
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
+    }
+} else {
+    echo "0 results";
 }
 CloseCon($conn);
 ?>
