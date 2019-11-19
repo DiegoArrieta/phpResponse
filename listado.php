@@ -16,12 +16,12 @@ $result = $conn->query($sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    $arreglo = [
+    
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        $row["id"] => $row["nombre"];
+        $arreglo = [$row["id"] => $row["nombre"]]
     }
-        ];
+        
 } else {
     echo "0 results";
 }
