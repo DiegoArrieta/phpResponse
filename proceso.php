@@ -7,5 +7,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == "OPTIONS") {
     die();
 }
-
+include 'bd.php';
+$conn = OpenCon();
+echo "Connected Successfully";
+CloseCon($conn);
 ?>
