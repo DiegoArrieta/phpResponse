@@ -19,8 +19,7 @@ if (mysqli_num_rows($result) > 0) {
     
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        
-        echo "<tr><td>".$row['id']."</td></tr>";
+        echo "<tr><td>".$row['id']."</td><td>".$row['nombre']."</td><td>".$row['apellido']."</td><td>".$row['fecha_inicio']."</td><td>".$row['fecha_termino']."</td><td>".$row['dias']."</td><td>".$row['servicio']."</td><td>".$row['habitacion ']."</td><td>".$row['costo']."</td><td>".$row['pais']."</td></tr>";
         
     }
         
