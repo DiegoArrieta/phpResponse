@@ -51,7 +51,7 @@
       </div>
       <div class="w-full md:w-1/2">
         <h1>Reservar Habitación</h1>
-        <form class="w-full max-w-lg">
+        <form id="formulario-hotel" class="w-full max-w-lg" action="https://zeussapp.herokuapp.com/proceso.php">
           <!-- Inicio Primer Bloque -->
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -60,7 +60,7 @@
               </label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="formulario-nombre" type="text" placeholder="Ej: Juan">
+                id="formulario-nombre" name="formulario-nombre" type="text" placeholder="Ej: Juan">
 
             </div>
             <div class="w-full md:w-1/2 px-3">
@@ -70,7 +70,7 @@
               </label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="formulario-apellido" type="text" placeholder="Ej: Soto">
+                id="formulario-apellido" name="formulario-apellido" type="text" placeholder="Ej: Soto">
             </div>
 
           </div>
@@ -85,7 +85,7 @@
               </label>
               <button
                 class="calendar text-center w-12 appearance-none block bg-blue-400 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="formulario-btnCalendar" type="text"><i class="text-white fas fa-calendar"></i></button>
+                id="formulario-btnCalendar" name="formulario-btnCalendar" type="text"><i class="text-white fas fa-calendar"></i></button>
             </div>
             <div class="w-full md:w-1/4 px-3">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -94,7 +94,7 @@
               </label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="formulario-finicio" type="text">
+                id="formulario-finicio" name="formulario-finicio" type="text">
             </div>
             <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -103,7 +103,7 @@
               </label>
               <input
                 class="calendar appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="formulario-ftermino" type="text">
+                id="formulario-ftermino" name="formulario-ftermino" type="text">
 
             </div>
             <div class="w-full md:w-1/4 px-3">
@@ -112,7 +112,7 @@
               </label>
               <input
                 class="appearance-none text-center block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="formulario-dtotal" type="text">
+                id="formulario-dtotal" name="formulario-dtotal" type="text">
             </div>
           </div>
             <!-- Termino Segundo Bloque -->
@@ -126,7 +126,7 @@
                 <div class="relative">
                   <select
                     class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="formulario-habitacion">
+                    id="formulario-habitacion" name="formulario-habitacion">
 
                   </select>
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -142,7 +142,7 @@
                 <div class="relative">
                   <select
                     class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="formulario-hlistado">
+                    id="formulario-hlistado" name="formulario-hlistado">
 
                   </select>
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -157,7 +157,7 @@
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="formulario-costo" type="text" placeholder="">
+                  id="formulario-costo" name="formulario-costo" type="text" placeholder="">
               </div>
             </div>
             <!-- Termino Tercer Bloque -->
@@ -170,9 +170,23 @@
                     </label>
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="formulario-pais" type="text" placeholder="Ej: Chilezuela">
+                      id="formulario-pais" name="formulario-pais" type="text" placeholder="Ej: Chilezuela">
                 </div>
             </div>
+            <!-- termino Cuarto Bloque -->
+
+            <!-- Inicio Quino Bloque -->
+            <div class="flex flex-wrap -mx-3 mt-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <button type="clear" class="py-3 w-1/2 rounded border border-red-500 bg-red-300">Cancelar</button>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                  <button type="submit" class="py-3 w-1/2 rounded border border-green-500 bg-green-300">Enviar</button>
+              </div>
+            </div>
+            <!-- termino Cuarto Bloque -->
+
+
       </div>
       </form>
       <div class="w-full calender"></div>
@@ -266,7 +280,28 @@
 
       });
     });
-  </script>
-</body>
 
+    $(function() {
+    
+    $("#formulario-hotel").submit(function(e) {
+        console.log($("#formulario-hotel").serialize())
+        e.preventDefault();
+        var actionurl = e.currentTarget.action;
+        $.ajax({
+                url: actionurl,
+                type: 'post',
+                dataType: 'application/json',
+                data: $("#formulario-hotel").serialize(),
+                success: function(data) {
+                    console.log(data)
+                }
+        });
+
+    });
+
+});
+  </script>
+</body><td>
 </html>
+
+
