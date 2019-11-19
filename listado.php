@@ -14,13 +14,14 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     
-    $arreglo = [
-    while($row = $result->fetch_assoc()) {
-        //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        $row['id'], ['nombre'], $row['apellido'], $row['fecha_inicio'], $row['fecha_termino'], $row['dias'], $row['servicio'], $row['habitacion '], $row['costo'], $row['pais'];
-    }
-    ];
-    echo $arreglo;
+    $columnValues = Array();
+
+while ( $row = mysql_fetch_assoc($result) ) {
+
+  $columnValues[] = $row['columnname'];
+
+}
+    echo $columnValues;
 } else {
     echo "0 results";
 }
