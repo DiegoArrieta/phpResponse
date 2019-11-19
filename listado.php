@@ -11,12 +11,12 @@ include 'bd.php';
 $conn = OpenCon();
 $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
 $result = $conn->query($sql);
-$arreglot = array();
+
 if ($result->num_rows > 0) {
-    
-    echo $result;
-    
-    
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
+    }
 } else {
     echo "0 results";
 }
