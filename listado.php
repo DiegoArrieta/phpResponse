@@ -12,16 +12,13 @@ $conn = OpenCon();
 $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
 $result = $conn->query($sql);
 
+$result = $conn->query($sql);
+
 if ($result->num_rows > 0) {
-    echo $result;
-    $columnValues = Array();
-
-while ( $row = mysql_fetch_assoc($result) ) {
-
-  echo $row['nombre'];
-
-}
-    echo $columnValues;
+    
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
+    }
 } else {
     echo "0 results";
 }
