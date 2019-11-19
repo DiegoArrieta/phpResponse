@@ -9,6 +9,23 @@ if($method == "OPTIONS") {
 }
 include 'bd.php';
 $conn = OpenCon();
-echo "Connected Successfully";
+
+$nombre = $_POST['formulario-nombre'];
+$apellido = $_POST[''];
+$fecha_inicio = $_POST[''];
+$fecha_termino = $_POST[''];
+$dias = $_POST[''];
+$servicio = $_POST[''];
+$habitacion = $_POST[''];
+$costo = $_POST[''];
+$pais = $_POST[''];
+$sql = "INSERT INTO reservas (nombre, apellido, fecha_inicio, fecha_termino, dias, servicio, habitacion, costo,pais) VALUES (''$nombre', '$apellido', '$fecha_inicio', '$fecha_termino', '$dias', '$servicio', '$habitacion', '$costo', '$pais')";
+
+if(mysqli_query($conn, $sql)){
+    echo "Los datos se guardaron ok";
+} else{
+    echo "ERROR: no se pudo guardar $sql. " . mysqli_error($conn);
+}
 CloseCon($conn);
 ?>
+ 
