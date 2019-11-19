@@ -13,13 +13,15 @@ $sql = "SELECT * FROM dbcmy8cct16o1bed.reservas";
 $result = $conn->query($sql);
 
 $result = $conn->query($sql);
-$arreglo = Array();
+
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
+    $arreglo = [
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
-        $arreglo[] = Array($row["id"] => $row["nombre"]);
+        $row["id"] => $row["nombre"];
     }
+        ];
 } else {
     echo "0 results";
 }
